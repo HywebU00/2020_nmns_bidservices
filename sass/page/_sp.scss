@@ -1,0 +1,302 @@
+// 年月份 月曆 start
+.year_month_block {
+    font-size: 2em;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 500;
+    @media(max-width: 480px) {
+        font-size: 1.75em;
+    }
+    @media(max-width: 380px) {
+        font-size: 1.5em;
+    }
+    .year_month {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+        span {
+            color: #ee4f4b;
+            padding: 0 10px;
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+            font-size: 1.5em;
+            @media(max-width: 380px) {
+                padding: 0 5px;
+            }
+        }
+    }
+    .prev_btn, .next_btn {
+        display: inline-block;
+        vertical-align: middle;
+        a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: #666;
+            line-height: 40px;
+            border-radius: 50%;
+            &:hover {
+                background-color: #000;
+            }
+            @media(max-width: 380px) {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+.calendar_explain {
+    background-image: url('../images/icon_star.png');
+    background-position: 0 2px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+.people_sort {
+    background-color: #fff;
+    padding: 15px 20px 7px;
+    box-shadow: 0 0 2px #ccc;
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-align: center;
+    // @include screen('mobile'){
+    //  padding: 15px 100px 7px;
+    // }
+    // @include screen('xs_mobile'){
+    //  padding: 15px 30px 7px;
+    // }
+    ul {
+        margin: 0 auto;
+        padding: 0;
+        width: 80%;
+        list-style: none;
+        text-align: left;
+        @include screen('mobile') {
+            width: 90%;
+        }
+        @media(max-width:590px) {
+            width: 95%;
+        }
+        li {
+            display: inline-block;
+            ;
+            width: 105px;
+            margin: 0 4px 8px;
+            padding-left: 20px;
+            position: relative;
+            &:before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                left: 0;
+                top: 5px;
+                background-color: #666;
+            }
+            &.no01 {
+                &:before {
+                    background-color: #00a18b;
+                }
+            }
+            &.no02 {
+                &:before {
+                    background-color: #ff6e35;
+                }
+            }
+            &.no03 {
+                &:before {
+                    background-color: #006ccf;
+                }
+            }
+            &.no04 {
+                &:before {
+                    background-color: #e50022;
+                }
+            }
+            &.no05 {
+                &:before {
+                    background-color: #dda300;
+                }
+            }
+            &.no06 {
+                &:before {
+                    background-color: #0fa6c9;
+                }
+            }
+            &.no07 {
+                &:before {
+                    background-color: #9c2c8a;
+                }
+            }
+            &.no08 {
+                &:before {
+                    background-color: #707070;
+                }
+            }
+            &.no09 {
+                &:before {
+                    background-color: #b38850;
+                }
+            }
+        }
+    }
+}
+// 日曆calendar_Tb
+.calendar_Tb {
+    table {
+        word-break: break-all;
+        table-layout: fixed;
+        thead {
+            margin-bottom: 5px;
+        }
+        tbody {
+            border-top: 1px solid #ccc;
+        }
+        th {
+            background-color: #d3d3d3 !important;
+            border: 5px solid #f8f3e4;
+            color: #333;
+            padding: 0.5em 1em;
+            width: 14.28%;
+            font-size: 1.25em;
+            font-weight: 400;
+            &.weekend {
+                background-color: #f66f62 !important;
+                color: #fff;
+            }
+        }
+        td {
+            position: relative;
+            // min-height: 130px!important;
+            background-color: #fff !important;
+            border: 1px solid #ccc;
+            padding: 0.5em;
+            @include screen('xs_mobile') {
+                padding-left: 18% !important;
+                min-height: 65px;
+            }
+            @media(max-width: 380px){
+                 padding-left: 20% !important;
+            }
+            &:after {
+                content: '';
+                width: 1px;
+                height: 130px;
+                float: left;
+                background-color: #fff;
+                border:none;
+                @include screen('xs_mobile') {
+                    float: none;
+                    height: auto;
+                    background-color: red;
+                }
+            }
+            &:before {
+                position: absolute;
+                top: .5em;
+                left: .5em;
+                padding-right: 10px;
+                border-right: 1px solid #ccc;
+                height: 50px;
+                width: 10%;
+                padding-left:0;
+            }
+            &.othermonth {
+                .num_date {
+                    color: #d5d5d5;
+                }
+                @include screen('xs_mobile') {
+                    display: none;
+                }
+            }
+        }
+        .num_date {
+            position: absolute;
+            bottom: 0px;
+            right: 5px;
+            text-align: right;
+            color: #7a7a7a;
+            font-size: .938em;
+            @include screen('xs_mobile') {
+                position: absolute;
+                text-align: center;
+                right: auto;
+                left: 15px;
+                top: 30px;
+            }
+        }
+        ul {
+            margin: 0 0 20px;
+            padding: 0;
+            list-style-type: none;
+            li {
+                margin-bottom: 3px;
+                a {
+                    display: block;
+                    padding: 8px;
+                    background-color: #666;
+                    color: #fff;
+                    text-align: center;
+                    font-size: .938em;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    &.no01 {
+                        background-color: #00a18b;
+                        &:hover{
+                            background-color: darken(#00a18b, 15);
+                        }
+                    }
+                    &.no02 {
+                        background-color: #ff6e35;
+                        &:hover{
+                            background-color: darken(#ff6e35, 15);
+                        }
+                    }
+                    &.no03 {
+                        background-color: #006ccf;
+                        &:hover{
+                            background-color: darken(#006ccf, 15);
+                        }
+                    }
+                    &.no04 {
+                        background-color: #e50022;
+                        &:hover{
+                            background-color: darken(#e50022, 15);
+                        }
+                    }
+                    &.no05 {
+                        background-color: #dda300;
+                        &:hover{
+                            background-color: darken(#dda300, 10);
+                        }
+                    }
+                    &.no06 {
+                        background-color: #0fa6c9;
+                        &:hover{
+                            background-color: darken(#0fa6c9, 15);
+                        }
+                    }
+                    &.no07 {
+                        background-color: #9c2c8a;
+                        &:hover{
+                            background-color: darken(#9c2c8a, 15);
+                        }
+                    }
+                    &.no08 {
+                        background-color: #707070;
+                        &:hover{
+                            background-color: darken(#707070, 15);
+                        }
+                    }
+                    &.no09 {
+                        background-color: #b38850;
+                        &:hover{
+                            background-color: darken(#b38850, 15);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
