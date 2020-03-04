@@ -302,6 +302,7 @@
             .image {
                 position: relative;
                 overflow: hidden;
+                text-align: center;
                 // height: 180px;
                 div {
                     position: absolute;
@@ -322,7 +323,9 @@
                     }
                 }
                 img {
-                    width: 100%;
+                    max-width:100%;
+                    max-height: 180px;
+                    margin:0 auto;
                 }
             }
             h3 {
