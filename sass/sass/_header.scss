@@ -126,7 +126,7 @@
     }
     h1 {
         float: left;
-        margin: -10px 0 10px;
+        margin: -12px 0 10px;
         padding: 0;
         vertical-align: top;
         font-size: 1.875em;
@@ -136,15 +136,17 @@
             vertical-align: top;
         }
         img {
-            display: block;
+             display: inline-block;
             width: 200px;
             height: 30px;
+            margin-right: 10px;
         }
         span {
-            display: inline-block;
+             display: inline-block;
             vertical-align: top;
             color: $color-green;
             letter-spacing: .05em;
+            margin-top: 4px;
             em {
                 display: block;
                 font-size: .562em;
@@ -164,7 +166,7 @@
             img {
                 width: 200px;
                 height: 30px;
-                margin: 0px auto;
+                margin: 0px 10px 0 0;
             }
         }
         @include screen('xs_mobile') {
@@ -180,6 +182,7 @@
             }
             span {
                 display: block;
+                 margin-top:-4px;
                 em {
                     display: inline-block;
                     letter-spacing: 0;
@@ -208,6 +211,7 @@
             span {
                 line-height: 1.1em;
                 font-size: 1.063em;
+                letter-spacing: 0.1em;
                 em {
                     display: block;
                     padding: 0;
