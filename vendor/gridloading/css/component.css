@@ -15,7 +15,7 @@
 }
 @media(min-width: 901px) {
     .grid li:nth-child(1), .grid li:nth-child(3n), .grid li:nth-child(3n+1) {
-        padding-top: 60px;
+        padding-top:4.5em;
     }
 }
 @media (max-width: 900px) and (min-width: 481px) {
@@ -23,13 +23,10 @@
         width: 46%;
         height: auto;
         max-width:455px ;
+        padding-top: 4em;
     }
-    .grid li:nth-child(2n){
-        padding-top: 60px;
-
-    }
-    .grid li:nth-child(2n-1){
-        margin-bottom: 30px
+    .grid li:first-child{
+        padding-top: 0;
 
     }
 }
