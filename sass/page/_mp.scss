@@ -317,6 +317,7 @@
                     color: #fff;
                     text-align: center;
                     transition: .8s;
+                    z-index: 5;
                     span {
                         padding: 15px;
                         text-align: left;
@@ -333,6 +334,7 @@
                     max-height: 180px;
                     margin: auto;
                     display: block;
+                    z-index: 4;
                 }
             }
             h3 {
@@ -375,17 +377,24 @@
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     padding: 3px 0;
+                    color:#333;
+                    font-size: 1.25em;
+                    font-weight: 700;
+                   
                     span {
                         background-color: #969482;
                         padding: 3px 5px;
                         border-radius: 3px;
                         color: #fff;
                         margin-right: 4px;
-                        font-size: .938em;
+                        font-size: .75em;
+                         font-weight:normal;
                     }
                     em {
                         font-style: normal;
                         color: #333;
+                        font-size: .75em;
+                        font-weight:normal;
                     }
                 }
             }
