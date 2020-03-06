@@ -186,7 +186,7 @@
                 em {
                     display: inline-block;
                     letter-spacing: 0;
-                    font-size: 1em;
+                    font-size: 0.875em;
                     position: relative;
                     padding-left: 20px;
                     &:before {
@@ -200,7 +200,7 @@
                 }
             }
         }
-        @media(max-width: 430px) {
+        @media screen and (max-width: 410px) {
             font-size: 1em;
             padding: 8px 0px;
             img {
