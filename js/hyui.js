@@ -206,10 +206,18 @@ $(function() {
     var resizeTimer;
     _window.bind("load resize", function(event) {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function() {
+
+if ($(this).height() != height) {
+    height = $(this).height();
+   
+    resizeTimer = setTimeout(function() {
             search_mode = true;
             mobileMenu();
         }, 50);
+  }
+
+
+        
     });
     mobileMenu();
     // 行動版查詢
