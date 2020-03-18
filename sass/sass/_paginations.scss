@@ -6,7 +6,7 @@
     font-size: .938em;
     @extend %clearfix; // outline: 1px solid red;
     span {
-        color: $primaryColor;
+        color: $secondaryColor;
         margin: 0px .5em;
     }
     .page {
@@ -114,8 +114,13 @@
     }
     .total {
         padding: 0em;
+        margin:0;
         display: inline-block;
         vertical-align: middle;
+        font-size: 1em;
+        color:#000;
+        font-weight: normal;
+        text-align: left;
         select {
             margin: 0px .5em;
             @include screen('mobile') {
@@ -146,8 +151,11 @@
         
         a {
             padding: 0 5px;
-            color: $primaryColor;
+            color: $secondaryColor;
             text-decoration: none;
+            &:hover{
+                color:$aHover;
+            }
         }
     }
 }

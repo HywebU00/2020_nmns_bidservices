@@ -186,5 +186,5 @@ $(function() {
     //點選關閉按鈕及透明底都可關閉
     $('.modal_overlay').click(closeModal);
     $('.modal .close').click(closeModal);
-     $('.btn_grp .cancel').click(closeModal);
+    $('.btn_grp .cancel').click(closeModal);
 });

@@ -103,3 +103,24 @@ p{
 .word_blue{
     color: $color-blue;
 }
+.hidden {
+    display: none !important;
+}
+@media(min-width: 768px) {
+    .mobile_visible {
+        display: none !important;
+    }
+}
+@include screen('mobile') {
+    .mobile_hidden {
+        display: none !important;
+    }
+    .mobile_visible {
+        display: inline-block !important;
+    }
+}
+@include screen('xs_mobile'){
+    .xs_hidden{
+        display: none !important;
+    }
+}
