@@ -4,11 +4,13 @@
     z-index: 99;
     background: rgba(255, 255, 255, .9);
     width: 100%;
+    height: 90px;
     @extend %clearfix;
     @include screen('mobile') {
         position: fixed;
         width: 100%;
         background: rgba(255, 255, 255, 1);
+       height: 70px;
     }
     // 虛擬底色 - navigation bg
     // &:before {
@@ -49,7 +51,7 @@
         position: relative; // menu
         .sidebarCtrl {
             display: none;
-            right: 10px;
+            right: 0px;
             font-size: 0em;
             background-color: transparent !important;
             border: none !important;
@@ -105,7 +107,7 @@
         // mobile_member_btn
         .mobile_member_btn {
             display: none;
-            right: 80px;
+            right: 60px;
             font-size: 0em;
             background-color: transparent !important;
             border: none !important;
@@ -145,64 +147,46 @@
              display: inline-block;
             vertical-align: top;
             color: $color-green;
-            letter-spacing: .05em;
+            letter-spacing: .02em;
             margin-top: 4px;
-            em {
-                display: block;
-                font-size: .562em;
-                font-style: normal;
-                margin-top: 4px;
-                letter-spacing: .43em;
-            }
         }
         @include screen('tablet') {
             margin: 0px 0 10px;
         }
         @include screen('mobile') {
-            padding: 15px 0px;
+            padding: 20px 0px;
             text-align: left;
             height: 60px;
+            font-size: 1.562em;
             @include box-sizing;
             img {
                 width: 200px;
                 height: 30px;
-                margin: 0px 10px 0 0;
+                margin: 0px 10px 5px 0;
+                 
             }
+            
         }
         @include screen('xs_mobile') {
             padding: 10px 0px;
-            font-size: 1.063em;
+            font-size: 1.5em;
             a {
                 display: block;
             }
             img {
                 width: 190px;
                 height: auto;
-                margin: 0px;
+                margin: 0px 10px 5px 0;
             }
             span {
                 display: block;
                  margin-top:-4px;
-                em {
-                    display: inline-block;
-                    letter-spacing: 0;
-                    font-size: 0.875em;
-                    position: relative;
-                    padding-left: 10px;
-                    &:before {
-                        content: '-';
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        width: 10px;
-                        height: 10px;
-                    }
-                }
+                
             }
         }
         @media screen and (max-width: 410px) {
-            font-size: 1em;
-            padding: 8px 0px;
+            font-size: 1.188em;
+            padding: 10px 0px;
             img {
                 width: 160px;
                 height: auto;
@@ -211,17 +195,7 @@
             span {
                 line-height: 1.1em;
                 font-size: 1.063em;
-                letter-spacing: 0.1em;
-                em {
-                    display: block;
-                    padding: 0;
-                    margin: 0;
-                    font-size: .813em;
-                    &:before {
-                        content: '';
-                        display: none;
-                    }
-                }
+                
             }
         }
     }

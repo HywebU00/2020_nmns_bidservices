@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-html{
+html {
     scroll-behavior: smooth;
 }
 body {
@@ -19,7 +19,6 @@ body {
 .wrapper {
     width: 100%;
     margin: 0px auto;
-    
     @include screen('mobile') {
         background: #FFF;
         overflow: hidden;
@@ -28,7 +27,7 @@ body {
 }
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
-     @include gutter(); //gutter 代表左右要留白
+    @include gutter(); //gutter 代表左右要留白
     margin: 0 auto;
     max-width: $container-max; //請看_variable.scss
     // outline: 1px solid red;
@@ -37,32 +36,34 @@ body {
     position: relative;
     margin: 0 auto;
     padding: 0;
-    background-image:url('../images/mpbg01.jpg');
+    background-image: url('../images/mpbg01.jpg');
     background-repeat: repeat-x;
     background-position: center top;
     background-color: $contentbgcolor;
-
     // 可先設定一個中央區塊最大寬，限制accesskey對齊
-    @include screen('tablet'){
-background-position: 55% top;
+    @include screen('tablet') {
+        background-position: 55% top;
     }
     @include screen('mobile') {
         padding-top: 400px;
         background-position: 60% -70px;
-
     }
-    @include screen('xs_mobile'){
-         background-position: 65% -100px;
-          padding-top: 320px;
+    @include screen('xs_mobile') {
+        background-position: 60% 40px;
+        padding-top: 320px;
+        background-size: 1200px
+    }
+    @media(max-width: 420px) {
+        background-position: 58% 60px;
+        background-size: 1000px;
     }
     h2 {
         line-height: 1.25em;
     }
-    .accesskey{
+    .accesskey {
         color: $contentbgcolor;
     }
 }
-
 .main {
     &.small_size {
         font-size: .938em;
@@ -71,36 +72,44 @@ background-position: 55% top;
         font-size: 1.125em;
     }
 }
-p{
+p {
     line-height: 1.7em;
-    margin:0 0 15px 0;
+    margin: 0 0 15px 0;
     // &+p{
     //     margin
     // }
 }
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
-.innerpage {        
+.innerpage {
     background-image: url('../images/mpbg01_innerpage.jpg');
     @include screen('mobile') {
-         padding-top: 200px;
-        background-position: 60% -70px;
+        padding-top: 200px;
+        background-position: 50% 60px;
+        background-size: 1500px
+    }
+    @include screen('xs_mobile') {
+        background-position: 50% 70px;
+        background-size: 1200px
+    }
+    @media(max-width: 420px) {
+        padding-top: 160px;
+        background-size: 1000px;
     }
     >.container {
         @include gutter(); //gutter 代表左右要留白
     }
 }
-
-.hidden{
+.hidden {
     display: none;
 }
-.word_green{
+.word_green {
     color: $secondaryColor;
 }
-.word_red{
+.word_red {
     color: $color-red;
 }
-.word_blue{
+.word_blue {
     color: $color-blue;
 }
 .hidden {
@@ -119,8 +128,8 @@ p{
         display: inline-block !important;
     }
 }
-@include screen('xs_mobile'){
-    .xs_hidden{
+@include screen('xs_mobile') {
+    .xs_hidden {
         display: none !important;
     }
 }

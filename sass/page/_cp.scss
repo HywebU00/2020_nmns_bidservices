@@ -5,12 +5,12 @@ h2.title {
     margin: .1em 0 1em;
     text-align: center;
     font-size: 2em !important;
-    font-family: 'Noto Serif TC', serif;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
     position: relative;
     -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation-name: tracking-in-contract-bck;
-   
     @-webkit-keyframes tracking-in-contract-bck {
         0% {
             letter-spacing: 1em;
