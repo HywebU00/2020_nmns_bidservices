@@ -489,8 +489,8 @@ $(function() {
         $('html, body').animate({ scrollTop: 0 }, 400, 'easeOutExpo');
         e.preventDefault();
     });
-    $('.scrollToTop').keydown(function(e) {
-        _body.find('a:first').focus();
+     $('.scrollToTop').keydown(function(e) {
+        _body.find('a.goCenter').focus();
         e.preventDefault();
     });
     /*--------------------------------------------------------*/
