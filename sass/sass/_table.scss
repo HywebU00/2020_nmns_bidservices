@@ -24,7 +24,7 @@ table {
     }
     th,
     td {
-        padding: .6em;
+        padding: 1em;
         text-align: left;
     }
     td {
@@ -125,6 +125,7 @@ table {
             border-bottom: 1px solid #999 !important;
             position: relative;
             // padding: 10px !important;
+            padding:.6em;
             white-space: normal;
             text-align: left;
             display: block;
