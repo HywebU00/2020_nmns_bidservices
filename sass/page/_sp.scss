@@ -169,15 +169,13 @@
             position: relative;
             // min-height: 130px!important;
             background-color: #fff !important;
-            border: 1px solid #ccc;
+            border: 1px solid #999;
             padding: 0.5em;
             @include screen('xs_mobile') {
-                padding-left: 18% !important;
+                padding-left: 12% !important;
                 min-height: 65px;
             }
-            @media(max-width: 380px){
-                 padding-left: 20% !important;
-            }
+           
             &:after {
                 content: '';
                 width: 1px;
@@ -193,13 +191,22 @@
             }
             &:before {
                 position: absolute;
-                top: .5em;
-                left: .5em;
-                padding-right: 10px;
-                border-right: 1px solid #ccc;
-                height: 50px;
+                // top: .5em;
+                // left: .5em;
+                // padding-right: 10px;
+                // border-right: 1px solid #ccc;
+                // height: 50px;
                 width: 10%;
-                padding-left:0;
+                // padding-left:0;
+                top:0;
+                left:0;
+                bottom:0;
+                padding:5px;
+                background-color: #eee;
+                color:#333;
+                @include box-sizing;
+
+
             }
             &.othermonth {
                 .num_date {

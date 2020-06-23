@@ -28,7 +28,7 @@ table {
         text-align: left;
     }
     td {
-        border: #ddd 1px solid;
+        border: #999 1px solid;
         word-break: break-all;
         line-height: 1.7em;
         vertical-align: top;
@@ -62,7 +62,7 @@ table {
     th {
         background-color: #333;
         color: #fff;
-        border: #ccc 1px solid;
+        border: #999 1px solid;
         text-align: center;
         white-space: nowrap;
     }
@@ -116,35 +116,40 @@ table {
             left: -9999px;
         }
         tr {
-            border: 1px solid #ccc;
+            border: 1px solid #999;
             margin-bottom: 10px; // background-color: #333;
         }
         td {
             // Behave  like a "row"
             border: none !important;
-            border-bottom: 1px solid #ccc !important;
+            border-bottom: 1px solid #999 !important;
             position: relative;
-            padding: 10px !important;
-            padding-left: 35% !important;
+            // padding: 10px !important;
             white-space: normal;
             text-align: left;
             display: block;
+            padding-left: 35% !important;
             &:before {
                 content: attr(data-title);
-               position: absolute;
+                // display: block;
                 white-space: nowrap;
                 text-align: left;
-                color: #fff;
-                background-color:#333;
+                // color: $secondaryColor;
                 font-size: .938em;
                 font-weight: 600;
                 // padding-left: 12px;
-                top: 0;
-                left: 0;
+                position: absolute;
+                top:0;
+                left:0;
                 bottom:0;
-                width: 30%;
                 padding:10px;
+                width: 30%;
+                background-color: #333;
+                color:#fff;
                 @include box-sizing;
+
+
+
             }
             // &:after {
             //     content: '';
