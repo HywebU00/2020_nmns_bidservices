@@ -132,7 +132,7 @@ table {
             &:before {
                 content: attr(data-title);
                 // display: block;
-                white-space: nowrap;
+                white-space: wrap;
                 text-align: left;
                 // color: $secondaryColor;
                 font-size: .938em;
