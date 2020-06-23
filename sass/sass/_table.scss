@@ -125,27 +125,35 @@ table {
             border-bottom: 1px solid #ccc !important;
             position: relative;
             padding: 10px !important;
+            padding-left: 35% !important;
             white-space: normal;
             text-align: left;
             display: block;
             &:before {
                 content: attr(data-title);
-                display: block;
+               position: absolute;
                 white-space: nowrap;
                 text-align: left;
-                color: $secondaryColor;
+                color: #fff;
+                background-color:#333;
                 font-size: .938em;
                 font-weight: 600;
-                padding-left: 12px;
+                // padding-left: 12px;
+                top: 0;
+                left: 0;
+                bottom:0;
+                width: 30%;
+                padding:10px;
+                @include box-sizing;
             }
-            &:after {
-                content: '';
-                border: 5px solid $secondaryColor;
-                border-color: transparent transparent transparent $secondaryColor;
-                position: absolute;
-                top: 18px;
-                left: 10px;
-            }
+            // &:after {
+            //     content: '';
+            //     border: 5px solid $secondaryColor;
+            //     border-color: transparent transparent transparent $secondaryColor;
+            //     position: absolute;
+            //     top: 18px;
+            //     left: 10px;
+            // }
             &:last-child {
                 border-bottom: none !important;
             }
