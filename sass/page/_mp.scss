@@ -295,7 +295,13 @@
                 // outline: 1px solid red;
                 &:hover {
                     transform: translateY(-10px);
-                    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5)
+                    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5) ;
+                    .image {
+                        &:before{
+                             background-color: rgba(0, 0, 0, .4);
+                        }
+                        
+                    }
                 }
                 &:focus {
                     box-shadow: 0 0px 0px 3px $color-yellow;
@@ -307,6 +313,19 @@
                 text-align: center;
                 height: 180px;
                 border-bottom: 1px solid #eee;
+                &:before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            right: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba(0, 0, 0, 0);
+                            z-index: 9;
+                            transition: .5s;
+                        }
                 // div {
                 //     position: absolute;
                 //     top: 100%;
@@ -342,11 +361,11 @@
                 }
             }
             h3 {
-                background-color: rgba(255, 255, 255, .8);
-                color: #000;
+                // background-color: rgba(255, 255, 255, .8);
+                color: #fff;
                 padding: 7px 15px 5px;
                 margin: 0;
-                font-size: 1.125em;
+                font-size: 1.25em;
                 font-weight: 400;
                 height: 70px;
                 overflow: hidden;
@@ -360,6 +379,7 @@
                 top: 1em;
                 z-index: 9;
                 width: 100%;
+                text-shadow: 0 0 2px #333, 0 0 3px #333, 0 0 4px #333;
                 @include box-sizing;
             }
             .content {
@@ -367,16 +387,17 @@
                 p {
                     margin: 0;
                     padding: 0;
-                    color: #333;
+                    color: #666;
                     height: 25px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     line-height: 1.7em;
+                    font-size: .938em;
                 }
                 .time {
                     color: #2a907c;
-                    margin-bottom: 15px;
+                    margin-bottom: 0px;
                 }
                 .object {
                     overflow: hidden;
@@ -386,16 +407,26 @@
                     color: #706e5d;
                     font-size: 1.25em;
                     font-weight: 700;
-                    margin-bottom: 10px;
+                    margin-bottom: 0px;
                     span {
-                        background-color: #969482;
-                        padding: 3px 5px;
-                        border-radius: 3px;
-                        color: #fff;
-                        margin-right: 4px;
+                        // background-color: #969482;
+                        padding: 3px 0px;
+                        // border-radius: 3px;
+                        color: #333;
+                        margin-right: 15px;
                         font-size: .75em;
                         font-weight: normal;
                         display: inline-block;
+                        position: relative;
+                        &:before{
+                            content: '';
+                            width: 1px;
+                            height: 15px;
+                            background-color: #999;
+                            position: absolute;
+                            right:-7px;
+                            top:8px;
+                        }
                     }
                     em {
                         font-style: normal;

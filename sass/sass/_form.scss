@@ -21,11 +21,17 @@ select::-ms-expand {
 .form_grid {
     font-size: .938em;
     margin: .5em;
-    // border-top: 1px solid #DDD;
+    border: 1px solid #999;
     .form_grp {
-        border-bottom: 1px solid #DDD;
+        border-bottom: 1px solid #999;
         overflow: hidden;
-        padding: .4em 0;
+        padding:0;
+        margin:0;
+        display: flex;
+        align-items: stretch;
+        @include screen('mobile'){
+            display: block;
+        }
         // 閱讀條文
         &.agree {
             border-bottom: none;
@@ -37,22 +43,33 @@ select::-ms-expand {
         }
     }
     .form_title {
-        float: left;
-        width: $form_title_width;
-        @include gutter();
-        padding-top: 5px;
+        // float: left;
+        flex:0 0 $form_title_width;
+        // width: $form_title_width;
+        background-color: #333;
+        color:#fff;
+        // border-right: 1px solid #999;
+        // @include gutter();
+        // padding-top: 5px;
+        // padding-left: 30px;
+        padding:15px;
+        margin:0;
+        @include box-sizing;
         @include screen('mobile') {
-            width: 100%;
+             display: block;
         }
     }
     .form_content {
-        float: left;
+        // float: left;
         padding-top: 3px;
         width: calc(100% - #{$form_title_width});
-        @include gutter();
+        flex: auto;
+        padding:15px;
+        margin:0;
+        @include box-sizing;
         overflow: hidden;
         @include screen('mobile') {
-            width: 100%;
+             display: block;
         }
         // 第二層的設定
         .form_grp {

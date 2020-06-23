@@ -336,15 +336,8 @@ table {
     }
     .form_title {
         position: relative;
-        &:before {
-            content: '';
-            position: absolute;
-            width: 5px;
-            height: 25px;
-            left: 0;
-            top: 5px;
-            background-color: $secondaryColor;
-        }
+
+        
     }
     .form_content {
         .word {
@@ -354,11 +347,11 @@ table {
     }
     .form_explain {
         padding: 10px 20px;
-        background-color: $color-gray;
+        background-color: #eee;
         color: #000;
     }
     .btn_grp{
         padding:1em 0 0;
-        margin-bottom: 0;
+        margin-bottom: 1em;
     }
 }
