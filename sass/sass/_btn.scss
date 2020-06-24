@@ -10,7 +10,7 @@ $btn-radius:.2em;
     .btn {
         @media(max-width: 380px) {
             min-width: auto;
-            width: 100%;
+            // width: 100%;
         }
     }
 }

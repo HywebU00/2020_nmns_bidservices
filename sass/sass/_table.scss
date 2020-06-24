@@ -130,6 +130,7 @@ table {
             text-align: left;
             display: block;
             padding-left: 35% !important;
+            min-height: 50px;
             &:before {
                 content: attr(data-title);
                 // display: block;
@@ -147,6 +148,7 @@ table {
                 width: 30%;
                 background-color: #333;
                 color:#fff;
+
                 @include box-sizing;
 
 
