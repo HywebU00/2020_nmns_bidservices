@@ -152,6 +152,13 @@
         tbody {
             border-top: 1px solid #ccc;
         }
+        tr {
+            background-color: #fff;
+        }
+        tr:hover {
+            background-color: #fff6d2;
+            transition: .2s;
+        }
         th {
             background-color: #d3d3d3 !important;
             border: 5px solid #f8f3e4;
@@ -168,21 +175,20 @@
         td {
             position: relative;
             // min-height: 130px!important;
-            background-color: #fff !important;
+            // background-color: #fff !important;
             border: 1px solid #999;
             padding: 0.5em;
             @include screen('xs_mobile') {
-                padding-left: 12% !important;
+                padding-left: 17% !important;
                 min-height: 65px;
             }
-           
             &:after {
                 content: '';
                 width: 1px;
-                height: 130px;
+                height: 20px;
                 float: left;
                 background-color: #fff;
-                border:none;
+                border: none;
                 @include screen('xs_mobile') {
                     float: none;
                     height: auto;
@@ -196,17 +202,16 @@
                 // padding-right: 10px;
                 // border-right: 1px solid #ccc;
                 // height: 50px;
-                width: 10%;
+                width: 15%;
                 // padding-left:0;
-                top:0;
-                left:0;
-                bottom:0;
-                padding:5px;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                padding: 5px;
                 background-color: #eee;
-                color:#333;
+                color: #333;
+                text-align: center;
                 @include box-sizing;
-
-
             }
             &.othermonth {
                 .num_date {
@@ -219,23 +224,28 @@
         }
         .num_date {
             position: absolute;
-            bottom: 0px;
+            top: 0px;
             right: 5px;
             text-align: right;
             color: #7a7a7a;
             font-size: .938em;
+            font-weight: bolder;
             @include screen('xs_mobile') {
                 position: absolute;
                 text-align: center;
-                right: auto;
-                left: 15px;
+                right: 0;
+                left: 0;
                 top: 30px;
+                width: 15%;
             }
         }
         ul {
-            margin: 0 0 20px;
+            margin: 25px 0 0;
             padding: 0;
             list-style-type: none;
+            @include screen('xs_mobile') {
+                margin: 0;
+            }
             li {
                 margin-bottom: 3px;
                 a {
@@ -250,55 +260,55 @@
                     text-overflow: ellipsis;
                     &.no01 {
                         background-color: #00a18b;
-                        &:hover{
+                        &:hover {
                             background-color: darken(#00a18b, 15);
                         }
                     }
                     &.no02 {
                         background-color: #ff6e35;
-                        &:hover{
+                        &:hover {
                             background-color: darken(#ff6e35, 15);
                         }
                     }
                     &.no03 {
                         background-color: #006ccf;
-                        &:hover{
+                        &:hover {
                             background-color: darken(#006ccf, 15);
                         }
                     }
                     &.no04 {
                         background-color: #e50022;
-                        &:hover{
+                        &:hover {
                             background-color: darken(#e50022, 15);
                         }
                     }
                     &.no05 {
                         background-color: #dda300;
-                        &:hover{
+                        &:hover {
                             background-color: darken(#dda300, 10);
                         }
                     }
                     &.no06 {
                         background-color: #0fa6c9;
-                        &:hover{
+                        &:hover {
                             background-color: darken(#0fa6c9, 15);
                         }
                     }
                     &.no07 {
                         background-color: #9c2c8a;
-                        &:hover{
+                        &:hover {
                             background-color: darken(#9c2c8a, 15);
                         }
                     }
                     &.no08 {
                         background-color: #707070;
-                        &:hover{
+                        &:hover {
                             background-color: darken(#707070, 15);
                         }
                     }
                     &.no09 {
                         background-color: #b38850;
-                        &:hover{
+                        &:hover {
                             background-color: darken(#b38850, 15);
                         }
                     }
